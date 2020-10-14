@@ -18,15 +18,16 @@ let game = [
 
 const verdict = theWinnerTakesItAll(game);
 
+const arrayContainsChecker = (sourceArray, targetArray) => targetArray.every(element => sourceArray.includes(element));
+
+
 function theWinnerTakesItAll(game) {
   let diagonal = [];
   for (let index = 0; index < game.length; index++) {
-    const winnerRow = game[index].reduce(function (a, b) {
-      return a === b ? a : !b;
-    });
-    if (winnerRow) {
+    if(arrayContainsChecker(game[index], ["X", "X", "X"]) || arrayContainsChecker(game[index], ["O", "O", "O"])){
       console.log("winnerRow " + winnerRow);
       return winnerRow;
+
     }
 
     const columnsAsLines = game.map((row) => row[index]);

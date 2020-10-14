@@ -1,10 +1,6 @@
 const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
 const widths = [200, 300, 200];
 
-const leftValue = getLeftValueForImage(images, widths, 1);
-
-console.log(leftValue);
-
 function getLeftValueForImage(images, widths, index) {
   let results = 0;
   if (index - 1 < 0) {
@@ -21,3 +17,9 @@ function getLeftValueForImage(images, widths, index) {
 
   return results;
 }
+
+const leftValue = getLeftValueForImage(images, widths, 1);
+
+console.log(leftValue);
+
+

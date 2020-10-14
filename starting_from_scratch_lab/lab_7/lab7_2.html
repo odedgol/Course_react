@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      class Car {
+        constructor(color, speed) {
+          this.color = color;
+          this.speed = speed;
+        }
+      }
+      class Race {
+        constructor(car1, car2) {
+          this.car1 = car1;
+          this.car2 = car2;
+          this.cars = new Array();
+          this.cars.push(car1);
+          this.cars.push(car2);
+        }
+        add(car) {
+          this.cars.push(car);
+        }
+        getWinner() {
+          let winCar;
+          debugger;
+          for (let i = 0; i < this.cars.length - 1; i++)
+            if (this.cars[i].speed < this.cars[i + 1].speed)
+              winCar = this.cars[i + 1];
+          return 'And the winner is... ' + winCar.color;
+        }
+      }
+
+      const c1 = new Car("blue", 20);
+      const c2 = new Car("green", 30);
+      const c3 = new Car("red", 24);
+
+      const race = new Race(c1, c2);
+      race.add(c3);
+
+      // prints: And the winner is... green
+      console.log(race.getWinner());
+    </script>
+  </body>
+</html>
