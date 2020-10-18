@@ -1,0 +1,32 @@
+h1 {
+  margin: auto;
+  font-size: 18px;
+  text-align: center;
+  background: #eee;
+  border-radius: 3px;
+  padding: 2px;
+  width: 300px;
+  box-shadow: 2px 2px 2px #aaa;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid #777;
+  margin: 250 auto;
+  border-spacing: 0;
+  box-shadow: 3px 3px 3px #ccc;
+}
+tr,
+td {
+  border: 1px solid #111;
+  text-align: center;
+  padding: 3px;
+  font-size: 30px;
+}
+td.mod {
+  color:#fbec5d;
+}
+
+.dark {
+  background: #eee;
+  font-weight: bolder;
+}

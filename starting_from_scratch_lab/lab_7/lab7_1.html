@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <script>
+      class LightBulb {
+        constructor(name = "New Bulb") {
+          var div = document.createElement("div");
+          body.appendChild(div);
+          this._el = div;
+          this._el.textContent = name;
+          this._el.classList.add(name);
+        }
+
+        on() {
+          this._el.style.backgroundColor = "yellow";
+        }
+
+        off() {
+          this._el.style.backgroundColor = "";
+        }
+      }
+
+      var body = document.querySelector("body");
+      const bulb1 = new LightBulb("Bulb");
+      const bulb2 = new LightBulb("Bulb");
+      bulb1.on();
+      bulb1.off();
+      bulb2.on();
+    </script>
+  </body>
+</html>
