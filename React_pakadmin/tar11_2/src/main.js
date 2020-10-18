@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import MultiInput from "./multiInput";
+import TimeBumper from "./TimeBumper";
 import "../css/main.css";
 
 const App = () => {
@@ -13,11 +13,7 @@ const App = () => {
         flexDirection: "column",
       }}
     >
-      <MultiInput inputText={inputText} setInputText={setInputText} />
-      <MultiInput inputText={inputText} setInputText={setInputText} />
-      <MultiInput inputText={inputText} setInputText={setInputText} />
-      <MultiInput inputText={inputText} setInputText={setInputText} />
-      <MultiInput inputText={inputText} setInputText={setInputText} />
+      <TimeBumper/>
     </div>
   );
 };
