@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import GuessNumber from "./GuessNumber";
 import "../css/main.css";

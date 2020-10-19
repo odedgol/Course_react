@@ -1,18 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import PickAColor from "./PickAColor";
+import PickAColors from "./PickAColors";
 import "../css/main.css";
 
 const App = () => {
-
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <PickAColor/>
+    <div>
+      <PickAColors />
     </div>
   );
 };
