@@ -3,7 +3,7 @@ import tinycolor from "tinycolor2";
 
 export default function PickAColors() {
   const [divColor, setDivColor] = useState();
-  const triggers = [40, 30 , 20, 10, 0, -10, -20, -30 , -40];
+  const triggers = [40, 30, 20, 10, 0, -10, -20, -30, -40];
 
   function createColor(source, trigger) {
     return tinycolor(source).lighten(trigger).toHexString();
@@ -26,20 +26,20 @@ export default function PickAColors() {
         />
       </div>
       <br></br>
-      <div style={{display:'flex'}}>
-      {triggers.map(triger => {
-        return ( <div
-          style={{
-            backgroundColor: createColor(divColor, triger),
-            width: "50px",
-            height: "50px",
-            border: "1px solid black",
-          }}
-        ></div>)
-      })
-      }
+      <div style={{ display: "flex" }}>
+        {triggers.map((triger) => {
+          return (
+            <div
+              style={{
+                backgroundColor: createColor(divColor, triger),
+                width: "50px",
+                height: "50px",
+                border: "1px solid black",
+              }}
+            ></div>
+          );
+        })}
       </div>
-      
     </div>
   );
 }
