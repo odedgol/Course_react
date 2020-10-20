@@ -17,10 +17,7 @@ export default function GuessNumber({ randNumber }) {
       );
     } else {
       setOutputMessage(
-        "You did it!!!, the number was " +
-          randNumber +
-          " total steps " +
-          totalGuesses
+        `You did it!!!, the number was ${randNumber} total steps ${totalGuesses})`
       );
     }
   }
@@ -33,7 +30,7 @@ export default function GuessNumber({ randNumber }) {
         onChange={onNumberChange}
         style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
       />
-      {" " + outputMessage}
+      {outputMessage}
     </div>
   );
 }
