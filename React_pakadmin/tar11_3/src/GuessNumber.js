@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-export default function GuessNumber({ randNumber }) {
+export default function GuessNumber() {
   const [totalGuesses, setTotalGuesses] = useState(0);
   const [outputMessage, setOutputMessage] = useState("");
+  const [randNumber, setRandNumber] = useState(Math.floor(Math.random() * 1000) + 1);
 
   function onNumberChange(e) {
     const guessingNumber = e.target.value;
@@ -19,6 +20,7 @@ export default function GuessNumber({ randNumber }) {
       setOutputMessage(
         `You did it!!!, the number was ${randNumber} total steps ${totalGuesses})`
       );
+      setRandNumber(Math.floor(Math.random() * 1000) + 1);
     }
   }
 

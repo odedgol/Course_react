@@ -12,7 +12,7 @@ const App = () => {
         flexDirection: "column",
       }}
     >
-      <GuessNumber randNumber={Math.floor(Math.random() * 1000) + 1}/>
+      <GuessNumber/>
     </div>
   );
 };
