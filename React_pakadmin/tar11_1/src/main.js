@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import MultiInput from "./multiInput";
-import "../css/main.css";
 
 const App = () => {
   return (

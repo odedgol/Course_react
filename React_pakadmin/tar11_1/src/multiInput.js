@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../css/main.css";
+
 
 export default function MultiInput() {
   const [inputText, setInputText] = useState();
@@ -8,23 +10,13 @@ export default function MultiInput() {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        flexGrow: 0,
-        flexShrink: 0,
-        flexBasis: "50%",
-        justifyContent: 'start'
-
-      }}
-    >
+    <div className="container">
       <div>
         <input
           type="text"
           value={inputText}
           onChange={onChangeText}
-          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          className="item"
         />
       </div>
       <div>
@@ -32,7 +24,7 @@ export default function MultiInput() {
           type="text"
           value={inputText}
           onChange={onChangeText}
-          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          className="item"
         />
       </div>
       <div>
@@ -40,7 +32,7 @@ export default function MultiInput() {
           type="text"
           value={inputText}
           onChange={onChangeText}
-          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          className="item"
         />
       </div>
       <div>
@@ -48,7 +40,7 @@ export default function MultiInput() {
           type="text"
           value={inputText}
           onChange={onChangeText}
-          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          className="item"
         />
       </div>
       <div>
@@ -56,7 +48,7 @@ export default function MultiInput() {
           type="text"
           value={inputText}
           onChange={onChangeText}
-          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          className="item"
         />
       </div>
     </div>

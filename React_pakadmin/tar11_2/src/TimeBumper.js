@@ -1,47 +1,29 @@
 import React, { useState } from "react";
 
 export default function TimeBumper() {
-  const [timeObj, setTimeObj] = useState({ seconds: 0, minutes: 0, hours: 0 });
+  const [seconds, setSeconds] = useState();
 
   return (
     <div>
       Hours:
       <input
         type="number"
-        value={timeObj.hours}
-        onChange={(e) =>
-          setTimeObj({
-            seconds: e.target.value * 3600,
-            minutes: e.target.value * 60,
-            hours: e.target.value,
-          })
-        }
+        value={(seconds / 3600).toPrecision(3)}
+        onChange={(e) => setSeconds(e.target.value * 3600)}
         style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
       />
       Minutes:
       <input
         type="number"
-        value={timeObj.minutes}
-        onChange={(e) =>
-          setTimeObj({
-            seconds: e.target.value * 60,
-            minutes: e.target.value,
-            hours: (e.target.value / 60).toPrecision(3),
-          })
-        }
+        value={seconds / 60}
+        onChange={(e) => setSeconds(e.target.value * 60)}
         style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
       />
       Seconds:
       <input
         type="number"
-        value={timeObj.seconds}
-        onChange={(e) =>
-          setTimeObj({
-            seconds: e.target.value,
-            minutes: e.target.value / 60,
-            hours: (e.target.value / 3600).toPrecision(3),
-          })
-        }
+        value={seconds}
+        onChange={(e) => setSeconds(e.target.value)}
         style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
       />
     </div>
